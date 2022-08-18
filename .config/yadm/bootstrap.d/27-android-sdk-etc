@@ -22,3 +22,6 @@ sudo ln -s /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager /usr/local/s
 
 # Install various SDK and tools
 sdkmanager --install "cmdline-tools;latest" "build-tools;33.0.0" "platform-tools" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32" "platforms;android-33"
+
+# Clean up downloaded files
+rm -f ./commandlinetools-linux-8512546_latest.zip
