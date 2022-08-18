@@ -13,10 +13,6 @@ nvm install node
 echo "Installing pnpm"
 nvm use node
 npm install -g pnpm
-pnpm install-completion
 
 echo "Installing Firebase CLI"
 pnpm add -g firebase-tools
-
-echo "Setting up Firebase CLI"
-firebase login
