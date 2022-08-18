@@ -1,12 +1,12 @@
 # Starship
-install starship
+brew "starship"
 
-# Flutter Version Manager (FVM)
-tap leoafarias/fvm
-install fvm
+# Flutter Version Manager (fvm)
+tap "leoafarias/fvm"
+brew "fvm"
 
 # ugit (undo last git command)
-install ugit
+brew "ugit"
 
 # git-delta (syntax-highlighting pager for git, diff, and grep)
-install git-delta
+brew "git-delta"
