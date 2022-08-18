@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Add wsl.conf to reduce the clutter of $PATH copied from Windows"
+
+echo "[interop]\nappendWindowsPath = false\n" | sudo tee /etc/wsl.conf
