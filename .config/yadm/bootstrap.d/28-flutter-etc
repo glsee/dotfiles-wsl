@@ -7,5 +7,9 @@ echo "Installing & setting up Flutter"
 
 fvm install stable
 
-echo "Installing FlutterFire CLI"
-dart pub global activate flutterfire_cli
+# install FlutterFire only if flutterfire command doesn't exist
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+if ! command -v flutterfire >/dev/null 2>&1; then
+    echo "Installing FlutterFire CLI"
+    dart pub global activate flutterfire_cli
+fi
