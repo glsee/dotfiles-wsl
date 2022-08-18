@@ -67,4 +67,4 @@ For more details on how to make changes on the bootstrap scripts, refer to [yadm
 
 ## License
 
-[MIT](./.github/LICENSE)
+[MIT](./LICENSE)
