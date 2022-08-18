@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Create a symlink to Downloads folder on Windows"
 if [ -d "/mnt/c/Users/Kaiden/Downloads" ] &&  [ ! -f "~/downloads" ]; then
