@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # install build-essential
-sudo nala install build-essential -y
+if [ $(dpkg -s "build-essential" | grep -c "ok installed") -eq 0 ]; then
+    sudo nala install build-essential -y
+fi
 
 # install Homebrew if it's missing
 if ! command -v brew >/dev/null 2>&1; then
