@@ -2,12 +2,14 @@
 
 echo "Installing & setting up nala"
 
-echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+# install nala if it's missing
+if ! command -v nala >/dev/null 2>&1;
+    echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+    wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+    sudo apt update && sudo apt install nala -y
+fi
 
-sudo apt update && sudo apt install nala -y
-
-if [ -f "/etc/apt/sources.list.d/nala-sources.list" ]; then
+if [ ! -f "/etc/apt/sources.list.d/nala-sources.list" ]; then
     # get fastest mirror for Ubuntu packages
     yes | sudo nala fetch --auto
 fi
