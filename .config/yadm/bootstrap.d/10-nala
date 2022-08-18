@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Installing & setting up nala"
 
@@ -7,6 +7,9 @@ wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gp
 
 sudo apt update && sudo apt install nala -y
 
-yes | sudo nala fetch --auto
+if [ -f "/etc/apt/sources.list.d/nala-sources.list" ]; then
+    # get fastest mirror for Ubuntu packages
+    yes | sudo nala fetch --auto
+fi
 
 sudo nala upgrade -y
