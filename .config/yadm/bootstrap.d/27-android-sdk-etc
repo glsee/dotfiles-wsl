@@ -17,7 +17,7 @@ if [ ! -d "/usr/lib/android-sdk/cmdline-tools" ]; then
     wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip
     unzip ./commandlinetools-linux-8512546_latest.zip # extracted files are in 'cmdline-tools' dir
     ./cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root=/usr/lib/android-sdk/
-    yes | ./cmdline-tools/bin/sdkmanager --licenses
+    yes | ./cmdline-tools/bin/sdkmanager --licenses --sdk_root=/usr/lib/android-sdk/
     ./cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root=/usr/lib/android-sdk/
     sudo ln -s /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager /usr/local/sbin/sdkmanager
 
