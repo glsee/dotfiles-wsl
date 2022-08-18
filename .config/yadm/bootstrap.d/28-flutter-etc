@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Installing & setting up Flutter"
+
+fvm install stable
+
+echo "Installing FlutterFire CLI"
+dart pub global activate flutterfire_cli
