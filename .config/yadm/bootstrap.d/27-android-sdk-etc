@@ -2,8 +2,9 @@
 
 # Install unzip
 if [ $(dpkg -s "unzip" | grep -c "ok installed") -eq 0 ] ||  [ $(dpkg -s "openjdk-17-jdk" | grep -c "ok installed") -eq 0 ]; then
-echo "Install unzip and OpenJDK 17"
-sudo nala install unzip openjdk-17-jdk -y
+    echo "Install unzip and OpenJDK 17"
+    sudo nala install unzip openjdk-17-jdk -y
+fi
 
 # Set up SDK dir
 echo "Set up Android SDK directory"
