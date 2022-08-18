@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+# Load homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 echo "Installing & setting up Flutter"
 
