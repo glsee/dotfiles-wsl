@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "Installing neofetch and customizing MOTD with it"
+
+sudo nala install neofetch -y
+
+echo "#!/bin/sh\nif [ -x /usr/bin/neofetch ]; then\n    exec /usr/bin/neofetch\nfi" | sudo tee /etc/update-motd.d/01-custom-motd-neofetch
+
+sudo chmod -x /etc/update-motd.d/00-header /etc/update-motd.d/10-help-text /etc/update-motd.d/50-motd-news
