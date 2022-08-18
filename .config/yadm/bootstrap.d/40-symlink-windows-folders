@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Create a symlink to Downloads folder on Windows"
+if [ -d "/mnt/c/Users/Kaiden/Downloads" ]; then
+    ln -s /mnt/c/Users/Kaiden/Downloads ~/downloads
+fi
