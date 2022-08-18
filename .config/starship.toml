@@ -1,0 +1,18 @@
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[directory]
+truncation_length = 3
+truncation_symbol = "⋯/"
+
+[git_status]
+windows_starship = '/mnt/c/Users/Kaiden/scoop/apps/starship/current/starship.exe'
+
+[username]
+disabled = false
+
+[sudo]
+disabled = false
