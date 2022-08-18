@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+# install build-essential
+sudo nala install build-essential -y
 
 # install Homebrew if it's missing
 if ! command -v brew >/dev/null 2>&1; then
