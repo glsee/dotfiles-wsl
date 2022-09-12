@@ -39,6 +39,7 @@ I mainly use WSL for web and Flutter development. For web development, I'm able 
 - Ability to run Flutter web projects on Microsoft Edge in Windows
 - Neat and sensible `$PATH` without paths copied from Windows
 - Bash prompt with `starship`
+- OpenJDK 17 as the Java runtime for Android tools and JDK environment for Android dev
 - `neofetch` and custom MOTD with it
 
 
