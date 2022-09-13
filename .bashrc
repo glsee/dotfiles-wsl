@@ -118,3 +118,8 @@ fi
 
 # starship - cross-shell prompt
 eval "$(starship init bash)"
+
+# pnpm
+export PNPM_HOME="/home/kaiden/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
