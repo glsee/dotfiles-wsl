@@ -8,6 +8,13 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Mount additional VHD in WSL
+if ! mount | grep -E 'dev-drive' ; then
+    /mnt/c/Windows/System32/wsl.exe -d Ubuntu --mount --vhd 'C:\Users\Kaiden\wsl\dev-drive.vhdx' --bare;
+#    sudo mount UUID=4f7575cc-eba0-47bb-bfcd-305f2e52b669 /mnt/dev-drive
+    sudo mount LABEL=dev-drive /mnt/dev-drive
+fi
+
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
