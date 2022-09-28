@@ -4,7 +4,5 @@ if [ ! -d "/mnt/dev-drive" ]; then
     sudo mkdir -p /mnt/dev-drive
 fi
 
-if [ ! -f "/etc/fstab" ]; then
-    echo "Add fstab entry to allow mounting Dev VHD"
-    echo "LABEL=dev-drive /mnt/dev-drive  ext4    user,nofail,defaults    0       2" | sudo tee -a /etc/fstab
-fi
+echo "Add fstab entry to allow mounting Dev VHD"
+echo "LABEL=dev-drive /mnt/dev-drive  ext4    user,nofail,defaults    0       2" | sudo tee -a /etc/fstab
