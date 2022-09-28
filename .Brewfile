@@ -1,3 +1,6 @@
+# GCC
+brew "gcc"
+
 # Starship
 brew "starship"
 
