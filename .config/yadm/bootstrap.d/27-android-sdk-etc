@@ -26,3 +26,6 @@ fi
 
 # Install various SDK and tools
 yes | sdkmanager --install "build-tools;33.0.0" "platform-tools" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32" "platforms;android-33"
+
+# Create symlink for adb
+sudo ln -s /usr/lib/android-sdk/platform-tools/adb /usr/local/sbin/adb
