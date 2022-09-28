@@ -75,7 +75,7 @@ yadm bootstrap
 
 Once finished, relaunch the shell to enjoy. Alternatively, run the following command to reload the shell profile:
 ```sh
-reload ~/.profile
+source ~/.profile
 ```
 
 
