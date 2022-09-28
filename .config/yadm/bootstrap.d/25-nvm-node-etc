@@ -1,16 +1,17 @@
 #!/bin/sh
 
-echo "Installing and setting up nvm 0.39.1"
+echo "Installing and setting up nvm"
 
 # Install Node Version Manager (NVM) and configure it with .profile
 if [ ! -d "$HOME/.nvm" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 fi
 if ! command -v -- "nvm" > /dev/null 2>&1; then
     \. "$HOME/.nvm/nvm.sh"
 fi
 
 echo "Installing the latest version of node"
+cd "$HOME/.nvm"
 nvm install node
 
 echo "Installing pnpm"
