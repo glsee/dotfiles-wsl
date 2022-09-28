@@ -2,7 +2,7 @@
 
 echo "Installing neofetch and customizing MOTD with it"
 
-if [ $(dpkg -s "neofetch" | grep -c "ok installed") -eq 0 ]; then
+if [ ! -x /usr/bin/neofetch ]; then
     sudo nala install neofetch -y
 fi
 
@@ -10,4 +10,4 @@ if [ ! -f "/etc/update-motd.d/01-custom-motd-neofetch" ]; then
     echo "#!/bin/sh\nif [ -x /usr/bin/neofetch ]; then\n    exec /usr/bin/neofetch\nfi" | sudo tee /etc/update-motd.d/01-custom-motd-neofetch
 fi
 
-sudo chmod -x /etc/update-motd.d/00-header /etc/update-motd.d/10-help-text /etc/update-motd.d/50-motd-news
+sudo chmod -x /etc/update-motd.d/00-header /etc/update-motd.d/10-help-text /etc/update-motd.d/50-motd-new
