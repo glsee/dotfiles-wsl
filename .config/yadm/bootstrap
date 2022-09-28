@@ -4,6 +4,18 @@
 # execute all executable files (excluding templates and editor backups) in the
 # ~/.config/yadm/bootstrap.d directory when run.
 
+
+# Prevent sudo timeout
+trap "exit" INT TERM
+trap "kill 0" EXIT
+sudo -v || exit $?
+sleep 1
+while true; do
+    sleep 60
+    sudo -nv
+done 2>/dev/null &
+
+
 set -eu
 
 # Directory to look for bootstrap executables in
