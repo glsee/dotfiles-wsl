@@ -11,7 +11,7 @@ if ! command -v -- "nvm" > /dev/null 2>&1; then
 fi
 
 echo "Installing the latest version of node"
-cd "$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 nvm install node
 
 echo "Installing pnpm"
