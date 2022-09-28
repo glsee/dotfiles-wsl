@@ -16,9 +16,7 @@ if [ ! -d "/usr/lib/android-sdk/cmdline-tools" ]; then
     echo "Download command line tool and run sdkmanager"
     wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip
     unzip ./commandlinetools-linux-8512546_latest.zip # extracted files are in 'cmdline-tools' dir
-    ./cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root=/usr/lib/android-sdk/
-    yes | ./cmdline-tools/bin/sdkmanager --licenses --sdk_root=/usr/lib/android-sdk/
-    ./cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root=/usr/lib/android-sdk/
+    yes | ./cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root=/usr/lib/android-sdk/
     sudo ln -s /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager /usr/local/sbin/sdkmanager
 
     # Clean up downloaded files
@@ -27,8 +25,4 @@ if [ ! -d "/usr/lib/android-sdk/cmdline-tools" ]; then
 fi
 
 # Install various SDK and tools
-sdkmanager --install "build-tools;33.0.0" "platform-tools" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32" "platforms;android-33"
-yes | sdkmanager --licenses
-
-# run again, just in case of the previous one failed due to missing license agreement
-sdkmanager --install "build-tools;33.0.0" "platform-tools" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32" "platforms;android-33"
+yes | sdkmanager --install "build-tools;33.0.0" "platform-tools" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32" "platforms;android-33"
