@@ -10,7 +10,6 @@
 
 # Mount additional VHD in WSL
 if ! cat /etc/mtab | grep -q '/mnt/dev-drive' ; then
-#    /mnt/c/Windows/System32/wsl.exe -d Ubuntu --mount '\\.\PhysicalDrive3' --partition 1 1>/dev/null ## need to run wsl.exe with Windows Admin
     /mnt/c/Windows/System32/wsl.exe -d Ubuntu --mount --vhd 'C:\Users\Kaiden\wsl\dev-drive.vhdx' --bare 1>/dev/null
     mount /mnt/dev-drive # mount based on fstab entry
 fi
