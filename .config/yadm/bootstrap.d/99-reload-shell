@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Reload .profile
-source ~/.profile

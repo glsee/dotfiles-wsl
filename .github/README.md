@@ -73,6 +73,11 @@ Next, run the following command to run the bootstrap scripts:
 yadm bootstrap
 ```
 
+Once finished, relaunch the shell to enjoy. Alternatively, run the following command to reload the shell profile:
+```sh
+reload ~/.profile
+```
+
 
 ## Related
 
