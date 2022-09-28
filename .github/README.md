@@ -43,13 +43,15 @@ I mainly use WSL for web and Flutter development. For web development, I'm able 
 - `neofetch` and custom MOTD with it
 
 
-## Installation
+## Personalization
 
 If you wish to set up your Ubuntu in WSL2 in a similar way as mine, you should first fork this repository.
 
 Then, replace my name and email in `.gitconfig`. You may also make changes to any other files according to your preference.
 
-Next, in your Ubuntu in WSL, install [yadm](https://yadm.io/)
+## Installation
+
+1. To set up the dotfiles in WSL Ubuntu, first install [yadm](https://yadm.io/)
 
 ```sh
 sudo apt install yadm
@@ -57,7 +59,18 @@ sudo apt install yadm
 
 To install the dotfiles as-is, run:
 ```sh
-yadm clone --bootstrap <clone URL of this repo>
+yadm clone https://github.com/glsee/dotfiles-wsl --no-bootstrap
+```
+
+It's likely that some local files like `.profile` and `.bashrc` already exist and yadm won't overwrite them.
+To overwrite the files, run the following command:
+```sh
+yadm checkout "/home/kaiden"
+```
+
+Next, run the following command to run the bootstrap scripts:
+```sh
+yadm bootstrap
 ```
 
 
