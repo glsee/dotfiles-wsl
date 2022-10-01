@@ -2,5 +2,5 @@
 
 if [ ! -f "/etc/wsl.conf" ]; then
     echo "Add wsl.conf to reduce the clutter of \$PATH copied from Windows"
-    echo "[interop]\nappendWindowsPath = false\n" | sudo tee /etc/wsl.conf >/dev/null
+    echo "[boot]\nsystemd=true\n\n[interop]\nappendWindowsPath = false\n" | sudo tee /etc/wsl.conf >/dev/null
 fi
