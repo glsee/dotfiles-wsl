@@ -7,7 +7,13 @@ if [ ! -x /usr/bin/neofetch ]; then
 fi
 
 if [ ! -f "/etc/update-motd.d/01-custom-motd-neofetch" ]; then
-    echo "#!/bin/sh\nif [ -x /usr/bin/neofetch ]; then\n    exec /usr/bin/neofetch\nfi" | sudo tee /etc/update-motd.d/01-custom-motd-neofetch  >/dev/null
+    sudo tee /etc/update-motd.d/01-custom-motd-neofetch >/dev/null <<EOF
+#!/bin/sh
+
+if [ -x /usr/bin/neofetch ]; then
+    exec /usr/bin/neofetch
+fi
+EOF
     sudo chmod +x /etc/update-motd.d/01-custom-motd-neofetch
 fi
 
