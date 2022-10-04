@@ -128,3 +128,10 @@ export PATH="$PNPM_HOME:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# composer
+# Sometimes we need to run composer outside the project's php
+# application container, e.g. when laravel sail is outdated
+# and the container image cannot be built.
+alias composer="docker run --rm --interactive --tty --volume $PWD:/app composer"
+
