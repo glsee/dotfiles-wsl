@@ -135,3 +135,12 @@ export NVM_DIR="$HOME/.nvm"
 # and the container image cannot be built.
 alias composer="docker run --rm --interactive --tty --volume $PWD:/app composer"
 
+# Flutter
+alias flutter="fvm flutter"
+alias dart="fvm dart"
+
+# Laravel Sail
+alias sail="vendor/bin/sail"
+
+# auto completion for cht.sh
+. ~/.bash.d/cht.sh
