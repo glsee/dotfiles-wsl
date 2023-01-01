@@ -2,8 +2,8 @@
 
 # Install unzip
 if [ $(dpkg -s "unzip" | grep -c "ok installed") -eq 0 ] ||  [ $(dpkg -s "openjdk-17-jdk" | grep -c "ok installed") -eq 0 ]; then
-    echo "Install unzip and OpenJDK 17"
-    sudo nala install unzip openjdk-17-jdk -y
+    echo "Install unzip and OpenJDK 8"
+    sudo nala install unzip openjdk-8-jdk -y
 fi
 
 if [ ! -d "/usr/lib/android-sdk/cmdline-tools" ]; then
