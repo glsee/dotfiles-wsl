@@ -136,7 +136,7 @@ eval $(ssh-agent) &>/dev/null
 # Sometimes we need to run composer outside the project's php
 # application container, e.g. when laravel sail is outdated
 # and the container image cannot be built.
-alias composer="docker run --rm --interactive --tty --volume $PWD:/app composer"
+alias composer="docker run --rm --interactive --tty --volume $PWD:/app --volume $SSH_AUTH_SOCK:/ssh-auth.sock --env SSH_AUTH_SOCK=/ssh-auth.sock -u $(id -u):$(id -g) composer"
 
 # Flutter
 alias flutter="fvm flutter"
