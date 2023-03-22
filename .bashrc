@@ -147,3 +147,7 @@ alias sail="vendor/bin/sail"
 
 # auto completion for cht.sh
 . ~/.bash.d/cht.sh
+
+# Cargo
+. "$HOME/.cargo/env"
+
