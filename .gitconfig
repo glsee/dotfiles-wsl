@@ -1,6 +1,6 @@
 [user]
-    email = see@guol.in
-    name = Kaiden See
+    email = 457429+glsee@users.noreply.github.com
+    name = Kaiden See (Github-verified)
 
 [core]
     pager = delta
@@ -18,3 +18,11 @@
 
 [diff]
     colorMoved = default
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.31.0/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.31.0/bin/gh auth git-credential
+[init]
+	defaultBranch = main
